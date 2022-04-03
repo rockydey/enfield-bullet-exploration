@@ -1,10 +1,18 @@
 import React from 'react';
+import useReviews from '../../hooks/useReviews';
+import ReviewBullet from '../ReviewBullet/ReviewBullet';
 import './Review.css';
 
 const Review = () => {
+    const [reviews, setReviews] = useReviews();
     return (
-        <div>
-            <h1>This is Review.</h1>
+        <div className='grid grid-cols-3 gap-7 mx-20'>
+            {
+                reviews.map(review => <ReviewBullet
+                    key={review.id}
+                    review={review}
+                ></ReviewBullet>)
+            }
         </div>
     );
 };
