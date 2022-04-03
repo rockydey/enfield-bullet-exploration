@@ -6,7 +6,7 @@ const ReviewBullet = ({ review }) => {
     return (
         <div className='review-bullet p-5 rounded-xl'>
             <h1 className='text-2xl font-semibold'>{name}</h1>
-            <h3 className='text-xl my-3'>Rating: <span className='text-orange-400 inline-block ml-2'>{rating}★</span></h3>
+            <h3 className='text-xl my-3'>Rating: <span className='text-orange-400 inline-block ml-2 font-semibold'>{rating}★</span></h3>
             <p className='text-lg'>"{text}"</p>
         </div>
     );
