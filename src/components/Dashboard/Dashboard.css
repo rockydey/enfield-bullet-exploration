@@ -1,0 +1,42 @@
+@media only screen and (max-width: 420px) {
+
+    .bar-chart div,
+    .composed-chart div,
+    .area-chart div,
+    .line-chart div {
+        width: 400px !important;
+    }
+    .bar-chart div svg,
+    .composed-chart div svg,
+    .area-chart div svg,
+    .line-chart div svg {
+        width: 400px !important;
+    }
+    .bar-chart div div,
+    .composed-chart div div,
+    .area-chart div div,
+    .line-chart div div {
+        width: 390px !important;
+    }
+    .bar-chart div div ul,
+    .composed-chart div div ul,
+    .area-chart div div ul,
+    .line-chart div div ul {
+        display: none;
+    }
+    .bar-chart div div div,
+    .composed-chart div div div,
+    .area-chart div div div,
+    .line-chart div div div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .bar-chart div div ul,
+    .composed-chart div div ul,
+    .area-chart div div ul,
+    .line-chart div div ul {
+        display: none;
+    }
+}

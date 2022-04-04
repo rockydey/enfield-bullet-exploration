@@ -6,7 +6,7 @@ import './Review.css';
 const Review = () => {
     const [reviews, setReviews] = useReviews();
     return (
-        <div className='grid grid-cols-3 gap-7 mx-20'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-7 md:mx-20'>
             {
                 reviews.map(review => <ReviewBullet
                     key={review.id}

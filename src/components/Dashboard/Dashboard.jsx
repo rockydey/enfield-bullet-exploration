@@ -10,9 +10,9 @@ const Dashboard = () => {
             .then(json => setData(json));
     }, []);
     return (
-        <div className='mx-10 grid grid-cols-2 gap-x-4 gap-y-7'>
-            <div>
-                <BarChart width={730} height={250} data={data}>
+        <div className='md:mx-10 grid md:grid-cols-1 lg:grid-cols-2 md:gap-x-4 gap-y-7'>
+            <div className='bar-chart'>
+                <BarChart width={700} height={250} data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="month" />
                     <YAxis />
@@ -23,8 +23,8 @@ const Dashboard = () => {
                     <Bar dataKey="revenue" fill="#82ca9d" />
                 </BarChart>
             </div>
-            <div>
-                <ComposedChart width={730} height={250} data={data}>
+            <div className='composed-chart'>
+                <ComposedChart width={700} height={250} data={data}>
                     <XAxis dataKey="month" />
                     <YAxis />
                     <Tooltip />
@@ -35,8 +35,8 @@ const Dashboard = () => {
                     <Line type="monotone" dataKey="revenue" stroke="#82ca9d" />
                 </ComposedChart>
             </div>
-            <div>
-                <AreaChart width={730} height={250} data={data}
+            <div className='area-chart'>
+                <AreaChart width={700} height={250} data={data}
                     margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                     <defs>
                         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -57,8 +57,8 @@ const Dashboard = () => {
                     <Area type="monotone" dataKey="revenue" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
                 </AreaChart>
             </div>
-            <div>
-                <LineChart width={730} height={250} data={data}
+            <div className='line-chart'>
+                <LineChart width={700} height={250} data={data}
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="month" />
